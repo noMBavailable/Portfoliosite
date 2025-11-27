@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contact Us Here!- Contact Form, Any Questions Or Concerns, Complaints. </title>
+    <meta name="description" content="Any Questions Are Appreciated - Interested About
+    Food Related Topics Or Negative Experiences, Let Us Know.">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us Here Via The Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    
+    <ul class="cntr_navbar" alt="navbar">
+        <li><a href="index.html" title="Startpage"><i class="fa-solid fa-house"></i></a></li>
+        <li><a href="Projects.html" class="active" alt="Projects">Projects</a></li>          
+        <li><a href="contact.html" alt="Contact">Contact</a></li>
+    </ul>
+
+     <!-- Page Title -->
+    <h1 class="page-title">Projects</h1>
+    <div class="title-underline"></div>
+
+    <div class="proj-showcase">
+         <!-- Right: Description -->
+  <div class="proj-description" id="projscroll">
+    <h2>Horse Race</h2>
+    <p>
+      We are developing a game for the "Fries landbouw museum" in Leeuwarden.
+      In the game you play as someone riding a horse traversing the land while answering questions based on the museum.
+      The movement is based on templerun, with having 3 lanes to horizontally move around in.
+      I'm currently leading this project with another fellow student and we have the responsibility of guiding the team in the right direction while dealing with documentation and planning.
+      We have 4 developers with us while making this project, so in total 6 people and are using scrum.
+      For the project we are making a wooden horse to sit on, thats the 3d sketchup image as the last slide.
+      We are also making vr controllers disguised as reins to control the horse.
+      This game is made in unity with c# as the scripting language.
+    </p>
+  </div>
+  <!-- Left: Image slider -->
+  <div class="proj-slider">
+    <button class="proj-prev">⟨</button>
+    <img id="proj-image" src="images/Screenshot 2025-11-24 210225.png" alt="Project Screenshot">
+    <button class="proj-next">⟩</button>
+  </div>
+
+  <div class="proj-description" id="projscroll-1">
+    <h2>Ascending Madness</h2>
+    <p>
+      This game is an unfinished dark souls like game where you ascend levels while fighting enemies.
+      The concept is that per level, waves of enemies increase, and you have to kill them all to go the the next level.
+      The coontrols are based on dark souls, with the signature roll, a triple attack, blocking, and future parying.
+      This game is made in unity with c# as the scripting language.
+    </p>
+  </div>
+  <!-- Left: Image slider -->
+  <div class="proj-slider">
+    <button class="proj-prev1">⟨</button>
+    <img id="proj-image1" src="images/Screenshot 2025-11-24 205313.png" alt="Project 1 image">
+    <button class="proj-next1">⟩</button>
+  </div>
+
+    <div class="proj-description" id="projscroll-2">
+    <h2>VR-Bowling</h2>
+    <p>
+      This is a VR-Bowling game with a working scoreboard and an official score counter.
+      The game is played with vr controllers, where you grab the ball, aim, and throw it towards the pins.
+      The scoreboard keeps track of your score and displays it after each frame.
+      The game is made in unity with c# as the scripting language.
+    </p>
+  </div>
+  <!-- Left: Image slider -->
+  <div class="proj-slider">
+    <button class="proj-prev2">⟨</button>
+    <img id="proj-image2" src="images/picture1vr.png" alt="Project Screenshot">
+    <button class="proj-next2">⟩</button>
+  </div>
+
+    <div class="proj-description" id="projscroll-3">
+    <h2>For the cause</h2>
+    <p>
+      A pixelart 2D platformer with multiple levels and powerups, with the goal the help clean the world.
+      You play as a character who collects trash and recycles it while avoiding enemies and obstacles.
+      The game features 3 levels with increasing difficulty and powerups like slowtime.
+      The game is made in unity with c# as the scripting language.
+    </p>
+  </div>
+  <!-- Left: Image slider -->
+  <div class="proj-slider marginbottom">
+    <button class="proj-prev3">⟨</button>
+    <img id="proj-image3" src="images/level1.PNG" alt="Project Screenshot">
+    <button class="proj-next3">⟩</button>
+  </div>
+
+ 
+</div>
+<script>
+
+  // Horse
+    const projImages = [
+    "images/Screenshot 2025-11-24 210225.png",
+    "images/Screenshot 2025-11-24 210259.png",
+    "images/Screenshot 2025-11-21 134112.png"
+    ];
+
+    let projIndex = 0;
+    const projImgElement = document.getElementById("proj-image");
+    const projNextBtn = document.querySelector(".proj-next");
+    const projPrevBtn = document.querySelector(".proj-prev");
+
+    projNextBtn.addEventListener("click", () => {
+    projIndex = (projIndex + 1) % projImages.length;
+    projImgElement.src = projImages[projIndex];
+    });
+
+    projPrevBtn.addEventListener("click", () => {
+    projIndex = (projIndex - 1 + projImages.length) % projImages.length;
+    projImgElement.src = projImages[projIndex];
+    });
+
+    // Ascending
+    const projImages1 = [
+    "images/Screenshot 2025-11-24 205313.png",
+    "images/Screenshot 2025-11-24 205410.png",
+    "images/Screenshot 2025-11-24 205430.png"
+    ];
+
+    let projIndex1 = 0;
+    const projImgElement1 = document.getElementById("proj-image1");
+    const projNextBtn1 = document.querySelector(".proj-next1");
+    const projPrevBtn1 = document.querySelector(".proj-prev1");
+
+    projNextBtn1.addEventListener("click", () => {
+    projIndex1 = (projIndex1 + 1) % projImages1.length;
+    projImgElement1.src = projImages1[projIndex1];
+    });
+
+    projPrevBtn1.addEventListener("click", () => {
+    projIndex1 = (projIndex1 - 1 + projImages1.length) % projImages1.length;
+    projImgElement1.src = projImages1[projIndex1];
+    });
+
+    // VR
+
+    const projImages2 = [
+    "images/picture1vr.png",
+    "images/picture2vr.png",
+    "images/picture3vr.png",
+    "images/picture4vr.png"
+    ];
+
+    let projIndex2 = 0;
+    const projImgElement2 = document.getElementById("proj-image2");
+    const projNextBtn2 = document.querySelector(".proj-next2");
+    const projPrevBtn2 = document.querySelector(".proj-prev2");
+
+    projNextBtn2.addEventListener("click", () => {
+    projIndex2 = (projIndex2 + 1) % projImages2.length;
+    projImgElement2.src = projImages2[projIndex2];
+    });
+
+    projPrevBtn2.addEventListener("click", () => {
+    projIndex2 = (projIndex2 - 1 + projImages2.length) % projImages2.length;
+    projImgElement2.src = projImages2[projIndex2];
+    });
+
+
+     const projImages3 = [
+    "images/level1.PNG",
+    "images/level2.PNG",
+    "images/level3.PNG"
+    ];
+
+    let projIndex3 = 0;
+    const projImgElement3 = document.getElementById("proj-image3");
+    const projNextBtn3 = document.querySelector(".proj-next3");
+    const projPrevBtn3 = document.querySelector(".proj-prev3");
+
+    projNextBtn3.addEventListener("click", () => {
+    projIndex3 = (projIndex3 + 1) % projImages3.length;
+    projImgElement3.src = projImages3[projIndex3];
+    });
+
+    projPrevBtn2.addEventListener("click", () => {
+    projIndex3 = (projIndex3 - 1 + projImages3.length) % projImages3.length;
+    projImgElement3.src = projImages3[projIndex3];
+    });
+</script>
+
+</body>
+</html>
